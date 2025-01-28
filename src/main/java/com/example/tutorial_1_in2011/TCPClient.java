@@ -16,15 +16,15 @@ public class TCPClient {
     public static void main(String[] args) throws IOException {
 
         // IP Addresses will be discussed in detail in lecture 4
-        String IPAddressString = "93.184.216.34";
+        String IPAddressString = "10.200.51.18";
         InetAddress host = InetAddress.getByName(IPAddressString);
 
         // Port numbers will be discussed in detail in lecture 5
-        int port = 65535;
+        int port = 2011;
 
         // This is where we create a socket object
         // That creates the TCP conection
-        System.out.println("GET /index.html HTTP/1.1\r\nHost: www.example.com\r\n\r\n" + host.toString() + ":" + port);
+        System.out.println("com.example.tutorial_1_in2011.TCPClient connecting to " + host.toString() + ":" + port);
         Socket clientSocket = new Socket(host, port);
 
         // Like files, we use readers and writers for convenience
